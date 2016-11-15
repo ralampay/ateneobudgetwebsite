@@ -1,0 +1,13 @@
+%section.content
+  .ui.segment
+    .schedules
+      %h1.ui.grey.centered.header{:style => "margin-top: 25px;"} SENTRAL SERVICES GUIDELINES
+      %hr
+    - @guidelines.each do |a|
+      %h3.text-blue
+        = a.title
+        .ui.label
+          = a.posted_at
+      %p
+        = a.content
+      %hr

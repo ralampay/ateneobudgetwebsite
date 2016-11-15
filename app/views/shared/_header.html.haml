@@ -1,0 +1,12 @@
+%header.main-header
+  = link_to root_path, class: 'logo' do
+    %span.logo-mini
+      %b ADMU
+    %span.logo-lg{:style => "font-size: 15px;"}
+      %b ATENEO BUDGET WEBSITE
+  %nav.navbar.navbar-static-top{role: "navigation"}
+    = link_to "#", class: "sidebar-toggle", data: { toggle: "offcanvas" }, role: "button" do
+      %span.sr-only Toggle Navigation
+    .navbar-custom-menu
+      %ul.nav.navbar-nav
+        

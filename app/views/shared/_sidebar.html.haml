@@ -1,0 +1,70 @@
+%aside.main-sidebar
+  %section.sidebar{style: "height: auto;"}
+    %ul.sidebar-menu
+      %li.header
+        MAIN NAVIGATION
+        %li.treeview
+          = link_to root_path do
+            %i.home.icon
+            %span Home
+        %li.treeview
+          = link_to announcements_path do
+            %i.home.icon
+            %span Announcements
+        %li.treeview
+          = link_to schedules_path do
+            %i.hospital.icon
+            %span Schedules
+            
+        %li.treeview
+          = link_to root_path do
+            %i.list.icon
+            %span Guidelines
+            %i.fa.fa-angle-left.pull-right
+          %ul.treeview-menu
+            %li.treeview
+              = link_to school_guidelines_path do
+                %i.fa.fa-circle-o.text-red
+                %span School Unit
+            %li.treeview
+              = link_to central_services_guidelines_path do
+                %i.fa.fa-circle-o.text-red
+                %span Central Services
+            %li.treeview
+              = link_to auxiliary_guidelines_path do
+                %i.fa.fa-circle-o.text-red
+                %span Auxilliaries
+            %li.treeview
+              = link_to capexes_path do
+                %i.fa.fa-circle-o.text-red
+                %span CAPEX
+
+        %li.treeview
+          = link_to root_path do
+            %i.money.icon
+            %span Budget Forms
+            %i.fa.fa-angle-left.pull-right
+          %ul.treeview-menu
+            - downloadable_forms.each do |df|
+              %li.treeview
+                = link_to df.file.url do
+                  %i.fa.fa-circle-o.text-red
+                  %span{:style => "background-color: #{df.color}; padding: 6px"}
+                    = df.name
+                  
+
+      
+
+        %li.treeview
+          = link_to new_uploaded_form_path do
+            %i.upload.icon
+            %span Upload Forms
+      
+  
+      
+      
+        
+
+
+
+   

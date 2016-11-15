@@ -1,0 +1,16 @@
+%section.content
+  = render partial: "shared/notification"
+  .ui.segment
+    %h1.ui.grey.centered.header{:style => "margin-top: 25px;"} UPLOAD FORMS
+    %center You may upload completed budget forms here. Please specify your name and select the corresponding unit from the list.
+    %hr
+    = simple_form_for @uploaded_form, defaults: { wrapper_html: { class: 'form-group' }, input_html: { class: 'form-control' } }, html: { multipart: true, novalidate: true } do |f|
+      .ui.form
+        .field
+          = f.input :uploaded_by
+        .field
+          = f.input :unit, as: :select, collection: ["SCHOOL", "AUXILIARY", "SERVICE", "OTHER"]
+        .field
+          = f.input :file, as: :file
+        .field
+          = f.submit "Submit", class: "btn btn-primary"
