@@ -23,7 +23,7 @@
 @import "font-awesome";
 
 #accounting_image {
-  background: url(accountancy.jpg) no-repeat center center fixed; 
+  background: asset_url('accountancy.jpg') no-repeat center center fixed; 
   background-size: cover;
   position: absolute;
   height: 100%;
