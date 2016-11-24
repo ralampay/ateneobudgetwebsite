@@ -17,7 +17,7 @@ gem 'hirb'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'haml'
 gem 'toastr-rails'
-gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
+gem "paperclip"
 gem 'devise'
 gem 'cocoon'
 gem 'kaminari'
