@@ -23,6 +23,7 @@ gem 'cocoon'
 gem 'kaminari'
 gem 'font-awesome-rails'
 gem 'dotenv-rails'
+gem 'therubyracer'
 group :development, :test do
   gem 'byebug'
 end
