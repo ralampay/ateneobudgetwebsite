@@ -23,7 +23,7 @@ ActiveAdmin.register Guideline do
       f.input :posted_at, as: :datepicker
       f.input :guideline_type, as: :select, collection: ["School", "Auxiliaries", "Central Services", "CAPEX"]
       f.input :content
-      f.inout :special
+      f.input :special
     end 
 
     f.actions
