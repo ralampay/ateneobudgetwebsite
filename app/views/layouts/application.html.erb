@@ -6,14 +6,11 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body class="skin-blue sidebar-mini">
-  <div class="wrapper">
+<body>
+  <div class="container-fluid">
     <%= render partial: "shared/header" %>
-    <%= render partial: "shared/sidebar" %>
-    <div class="content-wrapper">
-      <%= render partial: "shared/notification" %>
-      <%= yield %>
-    </div>
+    <%= render partial: "shared/notification" %>
+    <%= yield %>
     <%= render partial: "shared/footer" %>
   </div>
 </body>

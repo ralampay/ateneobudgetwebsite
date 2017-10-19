@@ -11,7 +11,7 @@ class UploadedFormsController < ApplicationController
       redirect_to new_uploaded_form_path
     else
       flash[:error] = "Cannot upload file. Please check form for details."
-      render :new
+      render "new"
     end
   end
 

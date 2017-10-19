@@ -1,19 +1,17 @@
-
 :css
   .ui.segment {
     font-size: 18px!important;
   }
   
 %section.content
-  .ui.segment
-    .schedules
-      %h1.ui.grey.centered.header{:style => "margin-top: 25px;"} CENTRAL SERVICES GUIDELINES
-      %hr
-    - @guidelines.each do |a|
-      %h3.text-blue
-        = a.title
-        .ui.label
-          = a.posted_at
-      %p
-        = a.content.html_safe
-      %hr
+  .schedules
+    %h1.ui.grey.centered.header{:style => "margin-top: 40px;"} CENTRAL SERVICES GUIDELINES
+    %hr
+  - @guidelines.each do |a|
+    %h3.text-blue
+      = a.title
+      .ui.label
+        = a.posted_at
+    %p
+      = a.content.html_safe
+    %hr
