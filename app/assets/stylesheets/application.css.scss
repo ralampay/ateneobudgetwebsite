@@ -23,10 +23,10 @@
 @import "font-awesome";
 
 #accounting_image {
-  background: asset_url('account.jpg') no-repeat center center fixed; 
+  background: asset_url('accountancy.jpg') no-repeat center center fixed; 
   background-size: cover;
-  position: absolute;
-  height: 100%;
+  position: fixed;
+  height: 86%;
   width: 100%;
 }
 
@@ -49,3 +49,16 @@
   }
 }
 
+.ui.menu {
+  border: none!important;
+  box-shadow: none!important;
+  margin-top: 20px;
+}
+
+.ui.menu .menu {
+  margin-top: 6%;
+}
+
+body {
+  font-family: Snell Roundhand, cursive;
+}

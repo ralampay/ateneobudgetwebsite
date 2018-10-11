@@ -1,62 +1,66 @@
 :css
-  .header {
-    margin-top: 20px;
+  img {
+    width: 600px;
   }
-.header
-  .ui.small.menu
-    .item
-      = link_to root_path do
-        %i.home.icon
-        %span Home
-    .item
-      = link_to announcements_path do
-        %i.home.icon
-        %span Announcements
-    .item
-      = link_to schedules_path do
-        %i.hospital.icon
-        %span Schedules
 
-    .ui.dropdown.item
-      Guidelines
-      %i.dropdown.icon
-      .menu
+.ui.menu.secondary.black
+  .row
+    .col-md-1
+    .col-md-3 
+      %center
+        = image_tag "logo.png", class: "ui image"
+    .col-md-1
+    .col-md-7
+      .ui.menu
         .item
-          = link_to school_guidelines_path do
-            %i.fa.fa-circle-o.text-red
-            %span School Unit
-        .item 
-          = link_to central_services_guidelines_path do
-            %i.fa.fa-circle-o.text-red
-            %span Central Services
+          = link_to root_path do
+            %i.home.icon
+            %span Home
         .item
-          = link_to auxiliary_guidelines_path do
-            %i.fa.fa-circle-o.text-red
-            %span Auxilliaries
+          = link_to announcements_path do
+            %i.home.icon
+            %span Announcements
         .item
-          = link_to capexes_path do
-            %i.fa.fa-circle-o.text-red
-            %span CAPEX
-        / .item
-        /   = link_to "http://budget.ateneo.net/system/downloadable_forms/files/000/000/019/original/Budget_Presentation_Template.pptx?1480147869" do
-        /     %i.fa.fa-circle-o.text-red
-        /     %span Budget Presentation Template
+          = link_to schedules_path do
+            %i.hospital.icon
+            %span Schedules
 
-    .item
-      = link_to new_uploaded_form_path do
-        %i.hospital.icon
-        %span Upload Form
+        .ui.dropdown.item
+          Guidelines
+          %i.dropdown.icon
+          .menu
+            .item
+              = link_to school_guidelines_path do
+                %i.fa.fa-circle-o.text-red
+                %span School Unit
+            .item 
+              = link_to central_services_guidelines_path do
+                %i.fa.fa-circle-o.text-red
+                %span Central Services
+            .item
+              = link_to auxiliary_guidelines_path do
+                %i.fa.fa-circle-o.text-red
+                %span Auxilliaries
+            .item
+              = link_to capexes_path do
+                %i.fa.fa-circle-o.text-red
+                %span CAPEX
 
-    .ui.dropdown.item
-      Budget Forms
-      %i.dropdown.icon
-      .menu
-        - downloadable_forms.each do |df|
-          .item
-            = link_to df.file.url do
-              %i.fa.fa-circle-o.text-red
-              %span{:style => "background-color: #{df.color}; padding: 6px"}
-                = df.name
+        .item
+          = link_to new_uploaded_form_path do
+            %i.hospital.icon
+            %span Upload Form
+
+        .ui.dropdown.item
+          Budget Forms
+          %i.dropdown.icon
+          .menu
+            - downloadable_forms.each do |df|
+              .item
+                = link_to df.file.url do
+                  %i.fa.fa-circle-o.text-red
+                  %span{:style => "background-color: #{df.color}; padding: 6px"}
+                    = df.name
 
 
 

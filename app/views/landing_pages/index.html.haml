@@ -2,21 +2,17 @@
   .container {
     font-family: "Time New Roman"!important;
   }
-%div#LandingPage
-  #accounting_image
-    .white
-      .container
-        .row
-          .col-md-12{:style => "margin-top: 20%;"}
-            %center
-              = image_tag "logo.png", width: "680px;"
-              %p
-                %h2{:style => "color: white; "}
-                  Budget Website for FY 2018-2019
-                  %br
-                  %br
-              = link_to announcements_path, class: "ui huge button" do
-                %b
-                  ENTER
-                  %i.right.chevron.icon
-          
+
+
+= render partial: "shared/header"
+#accounting_image
+  .white
+    .container
+      %center
+        %br
+        %br
+        %br
+        %h1{:style => "color: white; font-family: Snell Roundhand, cursive;"}
+          Ateneo de Manile University Budget Website 
+          %br
+          FY 2019-2020
